@@ -7,8 +7,8 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 import Typography from "@mui/material/Typography";
-import UploadCover from 'assets/images/upload/upload.svg';
-import CardMedia from '@mui/material/CardMedia';
+import UploadCover from "assets/images/upload/upload.svg";
+import CardMedia from "@mui/material/CardMedia";
 
 // third-party
 import { useDropzone } from "react-dropzone";
@@ -58,18 +58,19 @@ const SingleFileUpload = ({ error, file, setFieldValue, sx }) => {
   const thumbs =
     file &&
     file.map((item, index) => (
-        <Stack
+      <Stack
         spacing={2}
         alignItems="center"
         justifyContent="center"
-        direction={{ xs: 'column', md: 'row' }}
-        sx={{ width: 1, textAlign: { xs: 'center', md: 'left' } }}
-    >
+        direction={{ xs: "column", md: "row" }}
+        sx={{ width: 1, textAlign: { xs: "center", md: "left" } }}
+      >
         <CardMedia component="img" image={UploadCover} sx={{ width: 150 }} />
         <Stack sx={{ p: 3 }} spacing={1}>
-            <Typography variant="h5">{item.name}</Typography>
+          <Typography variant="h4" >File Attached:</Typography>
+          <Typography variant="h4" color={"blue"}>{item.name}</Typography>
         </Stack>
-    </Stack>
+      </Stack>
     ));
 
   const onRemove = () => {
@@ -87,11 +88,10 @@ const SingleFileUpload = ({ error, file, setFieldValue, sx }) => {
             borderColor: "error.light",
             bgcolor: "error.lighter",
           }),
-          
         }}
       >
         <input {...getInputProps()} />
-        
+
         {!file && <PlaceholderContent />}
         {thumbs}
       </DropzoneWrapper>

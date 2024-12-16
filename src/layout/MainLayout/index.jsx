@@ -40,28 +40,19 @@ const MainLayout = () => {
     }, [downMD]);
 
     const isHorizontal = menuOrientation === MenuOrientation.HORIZONTAL && !downMD;
-
-    // horizontal menu-list bar : drawer
-    const menu = useMemo(() => (isHorizontal ? <HorizontalBar /> : <Sidebar />), [isHorizontal]);
-
+   
     if (menuMasterLoading) return <Loader />;
 
     return (
         <Box sx={{ display: 'flex' }}>
-            {/* header */}
             <AppBar enableColorOnDark position="fixed" color="inherit" elevation={0} sx={{ bgcolor: 'background.default' }}>
                 <Toolbar sx={{ p: isHorizontal ? 1.25 : 2 }}>
                     <Header />
                 </Toolbar>
             </AppBar>
 
-            {/* menu / drawer */}
-            {menu}
-
-            {/* main content */}
             <MainContentStyled {...{ borderRadius, menuOrientation, open: drawerOpen, theme }}>
                 <Container maxWidth={container ? 'lg' : false} {...(!container && { sx: { px: { xs: 0 } } })}>
-                    {/* breadcrumb */}
                     <Breadcrumbs />
                     <Outlet />
                 </Container>

@@ -7,7 +7,6 @@ import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Charts from "./Charts";
 import { useState } from "react";
-import Button from "@mui/material/Button";
 import { FormHelperText } from "@mui/material";
 
 const MainPage = () => {
