@@ -32,8 +32,8 @@ const config = {
     fontFamily: `'Roboto', sans-serif`,
     borderRadius: 8,
     outlinedFilled: true,
-    mode: ThemeMode.LIGHT,
-    presetColor: Presets.theme0,
+    mode: ThemeMode.DARK,
+    presetColor: Presets.default,
     i18n: 'en',
     themeDirection: ThemeDirection.LTR,
     container: false

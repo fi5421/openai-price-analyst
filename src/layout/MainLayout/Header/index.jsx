@@ -33,7 +33,7 @@ const Header = () => {
 
     return (
         <>
-            {/* logo & toggler button */}
+            
             <Box sx={{ width: downMD ? 'auto' : 228, display: 'flex' }}>
                 <Box component="span" sx={{ display: { xs: 'none', md: 'block' }, flexGrow: 1 }}>
                     <LogoSection />
@@ -61,31 +61,7 @@ const Header = () => {
                 )}
             </Box>
 
-            {/* header search */}
-            <SearchSection />
-            <Box sx={{ flexGrow: 1 }} />
-            <Box sx={{ flexGrow: 1 }} />
-
-            {/* live customization & localization */}
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                <LocalizationSection />
-            </Box>
-
-            {/* notification */}
-            <NotificationSection />
-
-            {/* full sceen toggler */}
-            <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
-                <FullScreenSection />
-            </Box>
-
-            {/* profile */}
-            <ProfileSection />
-
-            {/* mobile header */}
-            <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-                <MobileSection />
-            </Box>
+            
         </>
     );
 };

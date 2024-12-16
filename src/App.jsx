@@ -11,8 +11,6 @@ import Notistack from 'ui-component/third-party/Notistack';
 
 import ThemeCustomization from 'themes';
 
-// auth provider
-import { JWTProvider as AuthProvider } from 'contexts/JWTContext';
 
 // ==============================|| APP ||============================== //
 
@@ -21,14 +19,14 @@ const App = () => {
         <ThemeCustomization>
             <Locales>
                 <NavigationScroll>
-                    <AuthProvider>
-                        <>
+                    
+                       
                             <Notistack>
                                 <RouterProvider router={router} />
                                 <Snackbar />
                             </Notistack>
-                        </>
-                    </AuthProvider>
+                 
+                   
                 </NavigationScroll>
             </Locales>
         </ThemeCustomization>

@@ -1,7 +1,6 @@
 import { lazy } from "react";
 
 // project imports
-import AuthGuard from "utils/route-guard/AuthGuard";
 import MainLayout from "layout/MainLayout";
 import Loadable from "ui-component/Loadable";
 
@@ -90,20 +89,26 @@ const AdvanceUITimeline = Loadable(lazy(() => import('views/ui-elements/advance/
 const AdvanceUIToggleButton = Loadable(lazy(() => import('views/ui-elements/advance/UIToggleButton')));
 const AdvanceUITreeview = Loadable(lazy(() => import('views/ui-elements/advance/UITreeview')));
 
+const OpenAIAnalyst = Loadable(lazy(()=> import('views/open_ai_analyst')));
+
 
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
     path: '/',
     element: (
-        <AuthGuard>
+    
             <MainLayout />
-        </AuthGuard>
+     
     ),
     children: [
         {
             path: '/',
-            element: <SamplePage />
+            element: <OpenAIAnalyst/>
+        },
+        {
+            path:'/openai_cost',
+            element: <OpenAIAnalyst />
         },
         {
             path: '/sample-page',
