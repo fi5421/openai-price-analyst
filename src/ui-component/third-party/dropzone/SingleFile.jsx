@@ -5,7 +5,6 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 import Typography from "@mui/material/Typography";
 import UploadCover from "assets/images/upload/upload.svg";
 import CardMedia from "@mui/material/CardMedia";

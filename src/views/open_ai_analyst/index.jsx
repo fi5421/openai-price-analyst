@@ -8,12 +8,13 @@ import Stack from "@mui/material/Stack";
 import Charts from "./Charts";
 import { useState } from "react";
 import { FormHelperText } from "@mui/material";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 const MainPage = () => {
   const [fileContent, setFileContent] = useState(null);
 
   const handleSubmit = (values) => {
-    console.log(values.files);
     if (values.files) {
       const file = values.files[0];
       console.log(file);
@@ -88,7 +89,16 @@ const MainPage = () => {
           </MainCard>
         </MainCard>
       ) : (
-        <Charts data={fileContent} />
+        <div>
+          <Grid container justifyContent="flex-end" sx={{ pb: 2 }}>
+            <Grid item>
+              <Button onClick={()=>(setFileContent(null))}variant="contained" color="primary">
+                Upload Another File
+              </Button>
+            </Grid>
+          </Grid>
+          <Charts data={fileContent} />
+        </div>
       )}
     </div>
   );
